@@ -39,8 +39,10 @@ const populateData = (data) => {
     const ul = document.createElement('ul');
     data.forEach(taskInfo => {
         const li = document.createElement('li');
+      //  const li2 = document.createElement('li2');
         li.innerText = taskInfo.name;
-        ul.appendChild(li);
+      //  li2.innerText = taskInfo.number;
+        ul.appendChild(li); //(li, li2)
     })
     datalist.appendChild(ul);
 };
@@ -49,7 +51,7 @@ const addData = () => {
     let name = prompt('give name');
    // let number = prompt('give number');
     let taskInfo = JSON.parse(localStorage.getItem('taskInfo'));
-    taskInfo.push(name); //(taskName, number);
+    taskInfo.push({name}); //(name, number);
     localStorage.setItem('taskInfo', JSON.stringify(taskInfo));
     populateData(taskInfo);
 
