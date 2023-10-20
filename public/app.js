@@ -28,8 +28,11 @@ const loadData = () => {
     fetch('/data')
         .then(response => response.json())
         .then(data => {
-            localStorage.setItem('taskInfo', JSON.stringify(data));
+            localStorage.setItem('contacts', JSON.stringify(data));
             populateData(data);
+        })
+        .then(data => {
+            localStorage.getItem('contacts', data);
         })
 };
 
@@ -40,7 +43,7 @@ const populateData = (data) => {
     data.forEach(taskInfo => {
         const li = document.createElement('li');
       //  const li2 = document.createElement('li2');
-        li.innerText = taskInfo.name;
+        li.innerText = contact.name + '' + contact.email;
       //  li2.innerText = taskInfo.number;
         ul.appendChild(li); //(li, li2)
     })
@@ -50,9 +53,9 @@ const populateData = (data) => {
 const addData = () => {
     let name = prompt('give name');
    // let number = prompt('give number');
-    let taskInfo = JSON.parse(localStorage.getItem('taskInfo'));
-    taskInfo.push({name}); //(name, number);
-    localStorage.setItem('taskInfo', JSON.stringify(taskInfo));
-    populateData(taskInfo);
+    let contacts = JSON.parse(localStorage.getItem('contacts'));
+    contacts.push({name}); //(name, number);
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+    populateData(contacts);
 
 };

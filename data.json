@@ -1,4 +1,4 @@
 [
-    {"name": "kalle"},
-    {"name": "pelle"}
+    {"name": "Kalle", "email": "kalle@email.se"},
+    {"name": "Pelle", "email": ""}
 ]
