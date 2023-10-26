@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Start</title>
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+        <title>Start</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -31,28 +35,63 @@
             </div>
         </div>
     </nav>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Person 1</h5>
-          <p class="card-text">Info om Kalle.</p>
-          <a href="#" class="btn btn-primary">Klicka för mer info
-            <div class="spinner-grow" role="status">
-                <span class="visually-hidden"></span>
-              </div>
-            </a>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h1>Kontakter</h1>
+          <p>Dina kontakter via Airtable</p>
+          <table id="contacts-table" class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Namn</th>
+                <th scope="col">Epost</th>
+                <th scope="col">Kommando</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>K.A</td>
+                <td>K@A.com</td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm">Redigera</button>
+                  <button type="button" class="btn btn-danger btn-sm">Radera</button>
+                </td>
+              </tr>
+              <tr>
+                <td>M.P</td>
+                <td>M@P.com</td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm">Redigera</button>
+                  <button type="button" class="btn btn-danger btn-sm">Radera</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Alla personer</h5>
-        <p class="card-text">
-            <div id="contacts"></div>
-        </p>
+        <h5 class="card-title">Person 1</h5>
+        <p class="card-text">Info om Kalle.</p>
+        <a href="#" class="btn btn-primary">Klicka för mer info
+          <div class="spinner-grow" role="status">
+            <span class="visually-hidden"></span>
+          </div>
+        </a>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
+    <footer>
+      <div class="container mt-5">
+        <div class="text-center" style="background-color: lightseagreen;">
+          © 2023 Team TE4
+        </div>
+      </div>
+    </footer>
+
+    
 </body>
 </html>
